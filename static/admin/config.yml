@@ -1,0 +1,21 @@
+publish_mode: editorial_workflow
+backend:
+  name: github
+  repo: marksteele/blog
+  base_url: https://RANDOMSTUFF.execute-api.us-east-1.amazonaws.com/prod
+  auth_endpoint: /oauth/auth
+site_id: www.control-alt-del.org
+media_folder: "static/images" 
+public_folder: "/images" 
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "content/blog"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured image", name: "thumbnail", widget: "image"}
+      - {label: "Categories", name: "categories", widget: "list", default: ["news"]}
+      - {label: "Body", name: "body", widget: "markdown"}
