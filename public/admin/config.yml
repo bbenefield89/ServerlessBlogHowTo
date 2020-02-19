@@ -2,8 +2,8 @@ publish_mode: editorial_workflow
 backend:
   name: github
   repo: bbenefield89/ServerlessBlogHowTo
-  base_url: https://vx2l99mv32.execute-api.us-east-1.amazonaws.com
-  auth_endpoint: /prod/auth
+  base_url: https://roum8dmuyf.execute-api.us-east-1.amazonaws.com
+  auth_endpoint: /default/gh_auth__request_id
 site_id: www.control-alt-del.org
 media_folder: "static/images" 
 public_folder: "/images" 
