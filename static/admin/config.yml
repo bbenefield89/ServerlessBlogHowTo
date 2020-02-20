@@ -19,5 +19,5 @@ collections:
       - {label: "Featured image", name: "thumbnail", widget: "image", required: false}
       - {label: "Categories", name: "categories", widget: "list", default: ["news"]}
       - {label: "Body", name: "body", widget: "markdown"}
-    slug: {{year}}-{{month}}-{{slug}} # {{slug}} will compile to "my-new-post"
-    preview_path: blog/{{slug}}
+    # slug: {{year}}-{{month}}-{{slug}}
+    # preview_path: blog/{{slug}}
