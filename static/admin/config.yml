@@ -8,10 +8,12 @@ site_id: www.control-alt-del.org
 media_folder: "static/images" 
 public_folder: "/images" 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
     folder: "content/posts"
     create: true # Allow users to create new documents in this collection
+    slug: /{{year}}-{{month}}-{{slug}}
+    preview_path: posts/{{slug}}
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
@@ -19,5 +21,3 @@ collections:
       - {label: "Featured image", name: "thumbnail", widget: "image", required: false}
       - {label: "Categories", name: "categories", widget: "list", default: ["news"]}
       - {label: "Body", name: "body", widget: "markdown"}
-    # slug: {{year}}-{{month}}-{{slug}}
-    # preview_path: blog/{{slug}}
